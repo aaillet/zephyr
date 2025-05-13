@@ -1,7 +1,4 @@
-.. _rcar_h3_salvatorx_boards:
-
-Renesas R-Car H3 Salvator-X
-###########################
+.. zephyr:board:: rcar_salvator_x
 
 Overview
 ********
@@ -14,54 +11,21 @@ Overview
   like USB, Ethernet, HDMI and can work standalone or can be adapted to other boards,
   via 440pin connector on bottom side.
 
-.. figure:: img/rcar_h3_salvatorx.jpg
-   :align: center
-   :alt: R-Car Salvator-X kit
-
 More information about the board can be found at `Renesas R-Car Development Support website`_.
 
 Hardware
 ********
 
-Hardware capabilities for the H3 Salvator-X for can be found on the `eLinux H3 Salvator-X page`_
-of the board.
-
-.. figure:: img/rcar_h3_features.jpg
-   :align: center
-   :alt: R-Car Salvator-X features
+Hardware capabilities for the H3 Salvator-X for can be found on the `eLinux H3 Salvator-X page`_.
 
 .. note:: Zephyr will be booted on the CR7 processor provided for RTOS purpose.
 
-More information about the SoC that equips the board can be found here:
-
-- `Renesas R-Car H3 chip`_
+More information about the SoC that equips the board can be found here: `Renesas R-Car H3 chip`_
 
 Supported Features
 ==================
 
-Here is the current supported features when running Zephyr Project on the R-Car Salvator-X CR7:
-
-+-----------+------------------------------+--------------------------------+
-| Interface | Driver/components            | Support level                  |
-+===========+==============================+================================+
-| PINCTRL   | pinctrl                      |                                |
-+-----------+------------------------------+--------------------------------+
-| CLOCK     | clock_control                |                                |
-+-----------+------------------------------+--------------------------------+
-| GPIO      | gpio                         |                                |
-+-----------+------------------------------+--------------------------------+
-| UART      | uart                         | serial port-polling            |
-+           +                              +                                +
-|           | FT232RQ / CP2102             | serial port-interrupt          |
-+-----------+------------------------------+--------------------------------+
-| CAN       | can                          | normal mode                    |
-+           +                              +                                +
-|           | TCAN332GDCNT                 | loopback mode                  |
-+-----------+------------------------------+--------------------------------+
-| I2C       | i2c                          | interrupt driven               |
-+-----------+------------------------------+--------------------------------+
-
-It's also currently possible to write on the ram console.
+.. zephyr:board-supported-hw::
 
 Connections and IOs
 ===================
@@ -98,6 +62,8 @@ as follows:
 
 Programming and Debugging
 *************************
+
+.. zephyr:board-supported-runners::
 
 Build and flash applications as usual (see :ref:`build_an_application` and
 :ref:`application_run` for more details).
